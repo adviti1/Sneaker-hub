@@ -63,14 +63,14 @@ const HomePage = () => {
           <a href="#about" className="nav-link">About</a>
           <a href="#contact" className="nav-link">Contact</a>
         </div>
-        <div className="navbar-spacer"></div> 
+        <div className="navbar-spacer"></div>
       </nav>
-      
+
       <div className="main">
         <section className="carousel">
           <div className="list">
             {items.map((item, index) => (
-              <article 
+              <article
                 key={index}
                 className={`item ${index === activeIndex ? 'active' : ''}`}
                 style={{
@@ -85,11 +85,10 @@ const HomePage = () => {
                     <p className="description">{item.description}</p>
                     <button className="view">View Products</button>
                   </div>
+                  <figure className='image'>
+                    <img src={item.image} alt={`${item.brand} sneakers`} />
+                  </figure>
                 </div>
-                <figure className='image'>
-                  <img src={item.image} alt={`${item.brand} sneakers`}/>
-                  <figcaption>{item.brand}</figcaption>
-                </figure>
               </article>
             ))}
           </div>
